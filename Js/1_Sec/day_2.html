@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./day_2.js"></script>
+</head>
+
+<body>
+    <h1>Chapter 1</h1>
+    <p id="fp">Basics: Variables, Data Types, Loops, Conditional Statements.</p>
+
+    <h1>My First Web Page</h1>
+    <p>My First Paragraph</p>
+    <h2 id="demo"></h2>
+    <button onclick="show_fun()">Click Show</button>
+    <button onclick="hide_fun()">Click Hide</button>
+
+    <!-- <p id="demo"></p> -->
+    <!-- <button type="button" onclick="document.write(5+5+55+6) ">Try It</button> -->
+    <!-- <button type="button" onclick="window.print(
+    'Hello JS Developer'
+)">try</button> -->
+    <!-- new  -->
+
+
+    <!-- <script src="./day_2.js"></script> -->
+    <script>
+        // document.getElementById('demo').innerHTML = 5 + 5;
+        // document.write(5 + 5 + 5)
+        // window.alert('Hello JS Develoepr is here')
+        // alert(5 + 5 + 5 + 5)
+        // window.print(
+        //     'Hello JS Developer'
+        // )
+        // new
+        // let a, b, c;
+        // a = 22;
+        // b = 40;
+        // c = a + b;
+        // window.alert(c)
+        // a = 5; b = 6; c = a + b;
+        // window.alert(c)
+        // let a, b;
+        // a = 50
+        // b = 60
+        // alert(a + b )
+        // document.getElementById("demo").innerHTML =
+        //     "Hello Dolly!";
+        // function myFun() {
+        //     document.getElementById("demo").innerHTML = "Hello Dolly!";
+        //     // document.getElementById("demo").innerHTML = "How are you?";
+        // }
+        // new here // How to create variables:
+        // How to use variables:
+        // let x, y;
+        // x = 5 + 6;
+        // y = x * 10;
+        // window.alert(y);
+        // var x, y;
+        // x = 5 + 6;
+        // y = x * 10;
+        // window.alert(y);
+        // let lastname, lastName;
+        // lastname = 'dev';
+        // lastName = 'joho weeks';
+        // alert(lastName)
+        // x = 5;
+        // y = 6;
+        // z = x + y;
+        // var x = 5;
+        // var y = 6;
+        // var z = x + y;
+        // alert(z)
+        // const price1 = 5;
+        // const price2 = 6;
+        // let total = price1 + price2;
+        // alert(total)
+        // const pi = 3.14;
+        // let person = " John Doe";
+        // let answer = 'Yes I am!';
+        // let person = "John Doe", carName = "Volvo", price = 200;
+        // let person = 'John Doe', carName = 'Noida Car', price = 500;
+        // var carName = 'Volar';
+        // var carName;
+        // let carName = "Volvo";
+        // let carName;
+        // let x = "5" + 2 + 3;
+        // let x = 2 + 3 + "5";
+        // let $ = "Hello World ";
+        // let $$$ = 2;
+        // let $myMoney = 5;
+        // $myMoney = 10000;
+        // var $myMoney;
+        // carName = "Saab";
+        // let carName = "Volvo";
+        // const PI = 3.141592653589793;
+        // PI = 3.14;      // This will give an error
+        // PI = PI + 10;   // This will also give an error
+        // document.getElementById('demo').innerHTML = PI;
+        // const PI = 3.14159265359;
+        // You can create a constant array:
+        // const cars = ["Saab", "Volvo", "BMW"];
+
+        // // You can change an element:
+        // cars[0] = "Toyota";
+
+        // // You can add an element:
+        // cars.push("Audi");
+        // // const cars = ["Saab", "Volvo", "BMW"];
+        // console.log('cars', cars);
+
+        // // cars = ["Toyota", "Volvo", "Audi"];    // ERROR
+        // const car = { type: 'Fiat', model: '500', color: 'red' }
+        // car.color = 'green';
+        // car.owner = 'Hohn Weeks Dev'
+
+        // console.log(car);
+        // document.getElementById('demo').innerHTML = 'hello ' + cars[0];
+
+        // Numbers:
+        // let length = 16;
+        // let weight = 7.5;
+
+        // // Strings:
+        // let color = "Yellow";
+        // let lastName = "Johnson";
+
+        // // Booleans
+        // let x = true;
+        // let y = false;
+
+        // // Object:
+        // const person = { firstName: "John", middleName: 'Weeks', lastName: "Doe" };
+
+        // // Array object:
+        // const cars = ["Saab", "Volvo", "BMW"];
+
+        // // Date object:
+        // const date = new Date("2022-03-25");
+        // const new_obj = {
+        //     name: 'roki vi',
+        //     title: 'hacker',
+        //     patinate: 'hacking and wroking'
+        // }
+        // new_arr = ['mango','banana', 'lichy','graps','plam']
+
+        // console.log(
+        //     'presenting data here --->  ',
+        //     length, weight,
+        //     color + ' "string" ', lastName, x, y,
+        //     person, cars, date, new_obj, new_obj.name, new_obj.title, new_arr,
+        //     new_arr[0]
+        // )
+        // let x = 16 + " Volvo";
+        // let x = "16 " + "Volvo";
+        // let x = "Volvo " + 16;
+        // let x = 16 + 4 + " Volvo";
+        // let x = "Volvo " + 16 + 4;
+        // console.log(x)
+        // let x;       // Now x is undefined
+        // console.log(x)
+        // x = 5;       // Now x is a Number
+        // console.log(x)
+        // x = "John";  // Now x is a String
+        // console.log(x)
+
+        // Single quote inside double quotes:
+        // let answer1 = "It's alright";
+
+        // // Single quotes inside double quotes:
+        // let answer2 = "He is called 'Johnny'";
+
+        // // Double quotes inside single quotes:
+        // let answer3 = 'He is called "Johnny"';
+        // console.log(answer1)
+        // console.log(answer2)
+        // console.log(answer3)
+        // With decimals:
+        // let x1 = 34.0;
+
+        // // Without decimals:
+        // let x2 = 34;
+        // console.log(x1, x2)
+        // let y = 123e5;    // 12300000
+        // let z = 123e-5;   // 0.00123
+        // let x = BigInt("123456789012345678901234567890");
+        // console.log(x)
+        // let x = 5;
+        // let y = 5;
+        // let z = 6;
+        // (x == y)       // Returns true
+        // (x == z)       // Returns false
+        // console.log(x == y)
+        // let car; 
+        // let hour = 20;
+        // if (hour < 18) {
+        //     greeting = "Good day";
+        //     console.log(greeting)
+        // }else{
+        //     greeting = "Bad day";
+        //     console.log(greeting);
+        // }
+        // const time = 111;
+        // if (time < 10) {
+        //     greeting = "Good morning";
+        //     console.log(greeting);
+        // } else if (time < 20) {
+        //     greeting = "Good day";
+        //     console.log(greeting);
+        // } else {
+        //     greeting = "Good evening";
+        //     console.log(greeting);
+        // }
+        // switch (new Date().getDay()) {
+        //     case 0:
+        //         day = "Sunday";
+        //         console.log(day)
+        //         break;
+        //     case 1:
+        //         day = "Monday";
+        //         console.log(day)
+        //         break;
+        //     case 2:
+        //         day = "Tuesday";
+        //         console.log(day)
+        //         break;
+        //     case 3:
+        //         day = "Wednesday";
+        //         console.log(day)
+        //         break;
+        //     case 4:
+        //         day = "Thursday";
+        //         console.log(day)
+        //         break;
+        //     case 5:
+        //         day = "Friday";
+        //         console.log(day)
+        //         break;
+        //     case 6:
+        //         day = "Saturday";
+        //         console.log(day)
+        // }
+        switch (new Date().getDay()) {
+            case 0:
+                // let day = 'sunday';
+                console.log('sunday');
+                break;
+            case 1:
+                console.log('Monday')
+                break;
+        }
+
+    </script>
+    <!-- <script src="./day_2.js"></script> -->
+</body>
+
+</html>

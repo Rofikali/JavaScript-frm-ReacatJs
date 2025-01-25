@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./day_4.js"></script>
+</head>
+
+<body>
+    <h1>Chapter 1</h1>
+    <p id="fp">Basics: Variables, Data Types, Loops, Conditional Statements.</p>
+
+    <h1>My First Web Page</h1>
+    <p>My First Paragraph</p>
+    <h2 id="demo"></h2>
+    <button onclick="show_fun()">Click Show</button>
+    <button onclick="hide_fun()">Click Hide</button>
+    <div>
+        <form onsubmit="sendData(e)">
+            <input type="text" name="fName">
+            <input type="text" name="lName">
+            <button>Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function sendData(e) {
+            e.preventDefault();
+            console.log(e)
+            window.write('Hello world')
+        }
+        let cars = ['one', 'two', 'three', 'four', 'six', 'seven', 'eight', 'nine']
+
+        // function sum(...args) {
+        //     let sum = 0;
+        //     let arg
+        //     // for (arg of args) sum += arg;
+        //     // return sum;
+        //     for (arg of args) {
+        //         sum += arg
+        //     }
+        //     return sum
+        // }
+
+
+        // let x = sum(4, 9, 16, 25, 29, 100, 66, 77);
+        // console.log(x)
+
+        // x = sumAll(441, 123, 500, 115, 44, 88);
+
+        // function sumAll() {
+        //     let sum = 0;
+        //     for (let i = 0; i < arguments.length; i++) {
+        //         sum += arguments[i];
+        //     }
+        //     return sum;
+        // }
+        // function data(...args) {
+        //     for (let arg of args) {
+        //         console.log(arg)
+        //     }
+        // }
+        // // console.log(x)
+        // x = data(441, 123, 500, 115, 44, 88);
+
+
+
+    </script>
+    <!-- <script src="./day_3.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./day_4.js"></script>
+</head>
+
+<body>
+    <h1>Chapter 1</h1>
+    <p id="fp">Basics: Variables, Data Types, Loops, Conditional Statements.</p>
+
+    <h1>My First Web Page</h1>
+    <p>My First Paragraph</p>
+    <h2 id="demo"></h2>
+    <button onclick="show_fun()">Click Show</button>
+    <button onclick="hide_fun()">Click Hide</button>
+
+    <script>
+        document.body.style.background = 'grey';
+        // document.body.style.color = 'black';
+
+        // let cars = ['one', 'two', 'three', 'four', 'six', 'seven', 'eight', 'nine']
+        // document.getElementById('demo').innerHTML = cars;
+
+        // let objs = {
+        //     name: 'roki vi',
+        //     phone: 445454,
+        //     city: 'lahor'
+        // }
+
+        // // document.getElementById('demo').innerHTML = objs.city;
+        // //Create an Object
+        // const person = {
+        //     firstName: "John",
+        //     lastName: "Doe",
+        //     age: 50, eyeColor: "blue"
+        // }
+
+        // // Create a copy
+        // const x = person;
+        // document.getElementById('demo').innerHTML = x.firstName;
+        // document.getElementById('demo').innerHTML = x.lastName;
+        // document.getElementById('demo').innerHTML = x.eyeColor;
+        // const car = {
+        //     brand: 'Volvo',
+        //     model: 'EX90',
+        //     // drive: [4, 5, 6]
+        //     drive: {
+        //         fst: 4,
+        //         snd: 5,
+        //         lst: 66
+        //     }
+        // };
+
+        // // car.brand='nothng'
+        // // objectName.property
+        // // let age = car.model;
+        // let age = car.brand
+        // // console.log('age is here ---->', car['drive'][1])
+        // console.log('age is here ---->', car.drive['fst'])
+        // document.getElementById('demo').innerHTML = car['model']
+        // let x = "firstname";
+        // let y = "age";
+        // const person = {
+        //     firstName: x,
+        //     lastName: y,
+        //     age: 50, eyeColor: "blue"
+        // }
+        // person.nationality = "English";
+        // // person[x] + " is " + person[y] + " years old.";
+        // // console.log(person['x'] + " is " + person[y] + " years old.");
+        // console.log(person);
+        // let dl = delete person.nationality;
+        // if (dl === true) {
+        //     console.log('nationality has been deleted')
+        //     console.log('nationality has been deleted')
+        //     if (person.age) {
+        //         delete person['age']
+        //         console.log('person.age also has been deleted')
+        //     }
+        // }
+        // else {
+        //     console.log('nationality has not been deleted')
+        // }
+        // console.log(person);
+        // myObj = {
+        //     name: "John",
+        //     age: 30,
+        //     myCars: {
+        //         car1: "Ford",
+        //         car2: "BMW",
+        //         car3: "Fiat"
+        //     }
+        // }
+
+        // let p1 = "myCars";
+        // let p2 = "car2";
+        // myObj[p1][p2];
+        // console.log(p1);
+        // console.log(myObj[p1][p2]);
+
+        // console.log(myObj['myCars']["car3"]);
+        // console.log(myObj.myCars["car2"]);
+        let years = ['2']
+
+        console.log(years["0"]);
+        // console.log(years["0"]);
+        console.log('deference is here')
+        console.log(years["0"] !== years["02"]);
+    </script>
+</body>
+
+</html>
