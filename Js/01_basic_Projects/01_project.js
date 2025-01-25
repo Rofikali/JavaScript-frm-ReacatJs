@@ -132,13 +132,179 @@ let obj = {
         }
     ]
 }
+// console.log(obj);
+// console.log(typeof obj);
+// console.log(obj.members);
 
-let fst = obj.members[0];
-let fst2 = obj.members[1];
-let fst3 = obj.members[2];
-// console.log(fst);
-// console.log(fst2);
-// console.log(fst3);
-fst.forEach(element => {
-    console.log(element);
+for (const key in obj) {
+    // console.log(`${key}-: ${obj[key]}`);
+    // console.log(key);
+    // const daa = key
+    // return key
+    // console.log(key);
+
+}
+
+// const config = {
+//     host: "localhost",
+//     port: 3000,
+//     protocol: "http",
+//     profession: "BlackHat Hacker"
+// };
+
+Object.keys(obj).forEach((key) => {
+    // console.log(`${key}: ${obj[key]}`);
+
+    // at the down i have to use arry's loop function here
+    // if (key == 'members') {
+    //     console.log('inside members');
+    //     Object.keys(key).forEach((item) => {
+    //         console.log(item);
+    //     })
+    // }
 });
+
+Object.values(obj).forEach((key) => {
+    // console.log(`${key} :- only values i gonna see here`);
+    // at the down i have to use arry's loop function here
+    // if (key == 'members') {
+    //     console.log('inside members');
+    //     Object.keys(key).forEach((item) => {
+    //         console.log(item);
+    //     })
+    // }
+});
+
+const env = {
+    NODE_ENV: "development",
+    PORT: 8000,
+    DATABASE_URL: "mongodb://localhost:27017/mydb",
+};
+
+for (const [key, value] of Object.entries(env)) {
+    // console.log(`${key}: ${value}`);
+}
+
+for (const element of Object.values(obj)) {
+    // console.log(element);
+    // console.log(obj[element]);
+}
+
+
+const data = {
+    NODE_ENV: "development",
+    PORT: 8000,
+    DATABASE_URL: "mongodb://localhost:27017/mydb",
+};
+
+for (const [ky, value] of Object.entries(obj)) {
+    // console.log(`${ky}: ${value}`);
+}
+
+const stats = {
+    uptime: 1200,
+    memoryUsage: "512MB",
+    activeUsers: 42,
+};
+
+for (const value of Object.keys(obj)) {
+    // console.log(value);
+}
+
+
+
+const jsonString = '{"name": "API Server", "status": "running", "uptime": "24 hours"}';
+// const jsonData = JSON.parse(jsonString);
+
+// Object.entries(jsonData).forEach(([key, value]) => {
+//     console.log(`${key}: ${value}`);
+// });
+
+// const jsonData = JSON.parse(jsonString)
+
+Object.entries(obj).forEach(([key, value]) => {
+    // console.log(`${key}:  ${value}`);
+})
+
+
+function printKeyValue(obj, prefix = "") {
+    for (let key in obj) {
+        if (typeof obj[key] === "object" && !Array.isArray(obj[key])) {
+            // If the value is an object, recurse into it
+            printKeyValue(obj[key], `${prefix}${key}.`);
+        } else if (Array.isArray(obj[key])) {
+            // If the value is an array, iterate through it
+            console.log(`${prefix}${key}: [`);
+            obj[key].forEach((item, index) => {
+                console.log(`  ${prefix}${key}[${index}]`);
+                if (typeof item === "object") {
+                    printKeyValue(item, `${prefix}${key}[${index}].`);
+                } else {
+                    console.log(`    ${prefix}${key}[${index}]: ${item}`);
+                }
+            });
+            console.log("]");
+        } else {
+            // If the value is a primitive, print it
+            console.log(`${prefix}${key}: ${obj[key]}`);
+        }
+    }
+}
+
+// Call the function on the given object
+// printKeyValue(obj);
+
+
+
+function processData(data) {
+    if (Array.isArray(data)) {
+        console.log("Processing array:", data);
+    } else {
+        console.log("Data is not an array:", data);
+    }
+}
+// processData([1, 2, 3, 'one', 'two', 'three']); // Processing array: [1, 2, 3]
+// let objAry = [['hello', 'pellow', 'jellow', 44, 78],
+// { name: 'admin' }];   // Data is not an array: Hell
+// // processData(objAry)
+// console.log(typeof objAry);
+// processData("['Hello,'helo']");   // Data is not an array: Hello
+
+let jsonData = {
+    items: ["Apple", "Banana", "Cherry"],
+    name: "Fruits",
+    age: 28,
+    address: 'lukampur, assam, 787023'
+};
+
+// for (const [element, elementData] of Object.entries(jsonData)) {
+//     console.log(element, elementData);
+// }
+
+
+function calculateTotalPrice(products) {
+    let totalPrice = 0;
+    // products.forEach((product) => {
+    //     totalPrice += product.price * product.quantity;
+    // });
+    // for (let index = 0; index < products.length; index++) {
+    //     const element = products[index];
+    //     // return element
+    //     console.log(index, element);
+    // }
+    for (const key in products) {
+        // console.log(key);
+        // // console.log(products[key]);
+        // console.log(products[key].name);
+        // console.log(products[key].age);
+        // console.log(products[key].powers[key]);
+        // totalPrice += products[key].age * products[key].name;
+        totalPrice += products[key].age * 5
+        // console.log(totalPrice);
+        // return totalPrice
+        console.log(key);
+    }
+    return totalPrice;
+}
+
+console.log(calculateTotalPrice(obj.numbers));
