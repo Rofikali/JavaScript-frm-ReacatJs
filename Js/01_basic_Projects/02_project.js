@@ -44,16 +44,16 @@ const studentData = `[
 // console.log(typeof obj);
 // console.log(typeof studentData);
 // console.log(Array.isArray(studentData));
-const josnData = JSON.parse(studentData)
+// const josnData = JSON.parse(studentData)
 // const obj = josnData[0]
 // console.log(typeof obj);
 // console.log(obj.username);
 // console.log(josnData);
 // console.log(typeof josnData);
 
-josnData.forEach(element => {
-    console.log(element);
-});
+// josnData.forEach(element => {
+//     console.log(element);
+// });
 
 // console.log(josnData[0]);
 
@@ -66,17 +66,49 @@ josnData.forEach(element => {
 // });
 // });
 
-josnData.forEach((element, index, jsonData) => {
-    // if (jsonData[index]) {
-    //     console.log(jsonData[index], index);
-    // }
-    if (jsonData[index].age === 22) {
-        // console.log(index, jsonData[index]);
-        Object.entries(jsonData[index]).forEach(([key, val]) => {
-            console.log(key, val);
-        })
+// josnData.forEach((element, index, jsonData) => {
+//     if (jsonData[index]) {
+//         console.log(jsonData[index], index);
+//     }
+//     // if (jsonData[index].age === 22) {
+//     //     // console.log(index, jsonData[index]);
+//     //     Object.entries(jsonData[index]).forEach(([key, val]) => {
+//     //         console.log(key, val);
+//     //     })
+//     // }
+//     // else {
+//     //     console.log('i am else block');
+//     // }
+// });
+
+// function GenerateClassReport(data) {
+//     const jsonData = JSON.parse(data);
+//     jsonData.forEach((element, index, jsonData) => {
+//         if (jsonData[index].rank === 5) {
+//             console.log(index, jsonData[index].username);
+//         }
+//     });
+// }
+
+// GenerateClassReport(studentData)
+
+const calculateRank = (data) => {
+    if (data.rank === 5) {
+        console.log(`${data.username} You got ---> Top ${data.rank} Rank`);
+        for (const [key, value] of Object.entries(data)) {
+            console.log(`${key}: ${value}`);
+        }
     }
     // else {
-    //     console.log('i am else block');
+    //     console.log(`You guys are not got Top -> Rank`);
     // }
-});
+
+};
+const gererateClassReport = (data) => {
+    const jsonData = JSON.parse(data);
+    Object.entries(jsonData).forEach(([Key, value]) => {
+        calculateRank(value);
+    })
+}
+
+gererateClassReport(studentData);
